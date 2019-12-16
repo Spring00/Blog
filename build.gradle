@@ -35,7 +35,7 @@ buildscript {
 // 使用插件
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
-apply plugin: 'war'
+apply plugin : 'war'
 
 
 
@@ -70,17 +70,15 @@ dependencies {
 
     // 该依赖对于编译测试是必须的，默认包含编译产品依赖和编译时依
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 
 
-    //mybatis
-    implementation('com.baomidou:mybatis-plus-boot-starter:2.2.0')
+
+
 
     //mybatis-plus 模板
     implementation('org.apache.velocity:velocity-engine-core:2.0')
 
-    //自定义jar包，包含了oracle的数据库的连接
-    implementation fileTree(dir:'libs',include:['*.jar'])
+
 
 
     //将tomcat的依赖范围修改为providedRuntime
