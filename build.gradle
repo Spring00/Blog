@@ -1,6 +1,6 @@
-
 group 'com.li'
 version '1.0-SNAPSHOT'
+
 
 // buildscript 代码块中脚本优先执行
 buildscript {
@@ -36,8 +36,10 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin : 'war'
+apply plugin: 'application'
+apply plugin: 'idea'
 
-
+mainClassName = 'smart.client.ClientApplication'
 
 // 指定编译 .java 文件的 JDK 版本
 sourceCompatibility = 1.8
@@ -69,7 +71,7 @@ dependencies {
     //compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity4:3.0.2.RELEASE')
 
     // 该依赖对于编译测试是必须的，默认包含编译产品依赖和编译时依
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+   // testCompile('org.springframework.boot:spring-boot-starter-test')
 
 
 
